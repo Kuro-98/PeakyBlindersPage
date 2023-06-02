@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peaky Blinders | Sitio No oficial de Netflix</title>
+  <link rel="icon" href="img/4375011_logo_netflix_icon.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <main>
+    <header>
+      <a href="#" class="logo"><img src="img/logo.png" alt="Logo Netflix"></a>
+      <ul class="navigation">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">TV Shows</a></li>
+        <li><a href="#">Movies</a></li>
+        <li><a href="#">Lates</a></li>
+        <li><a href="#">My List</a></li>
+      </ul>
+      <div class="search">
+        <input type="text" name="busqueda" id="busqueda" placeholder="Search">
+        <button class="btnbuscar"><span class="material-icons">search</span></button>
+      </div>
+    </header>
+
+    <section class="banner">
+      <img src="img/tms.jpg" alt="Banner Principal" class="bg">
+      <span class="sombraImg"></span>
+      <div class="contenido">
+        <img src="img/logoletras.png" alt="Logo Netflix" class="movieTitle">
+        <h4>
+          <span>2013</span>
+          <span><i>TV-MA</i></span>
+          <span>6 Temporadas</span>
+          <span>Drama</span>
+        </h4>
+        <p>
+          1919. Inglaterra. Thomas Shelby lidera una conocida banda de Birmingham que avanza con ferocidad por el bajo mundo.
+        </p>
+        <div class="buttons">
+          <a href="#">Play</a>
+          <a href="#">My list</a>
+        </div>
+      </div>
+
+      <a href="#" class="play" onclick="toggleVideo()"><img src="img/play.png" alt="Trailer Video"> Watch Trailer</a>
+
+    </section>
+    <section class="trailer">
+      <video src="img/trailer.mp4" controls="true"></video>
+      <img src="img/close.png" alt="Close Video" class="close" onclick="toggleVideo()">
+    </section>
+
+  </main>
+
+  <script>
+    function toggleVideo(){
+      const trailer = document.querySelector('.trailer');
+      const video = document.querySelector("video");
+      trailer.classList.toggle("active");
+      video.currentTime=0;
+      video.pause();
+    }
+  </script>
+</body>
+
+</html>
